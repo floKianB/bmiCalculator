@@ -12,14 +12,17 @@ class Application extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: new ThemeData(scaffoldBackgroundColor: Color.fromARGB(255, 13, 4, 43)),
+      theme: ThemeData(scaffoldBackgroundColor: Color.fromARGB(255, 13, 4, 43)),
       home: Scaffold(
         appBar: AppBar(
           title: Text("BIM Calculator", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold ,fontFamily: "Helvetica", color: Color.fromARGB(255, 13, 4, 43))),
           backgroundColor: Color.fromARGB(216, 255, 153, 0),
         ),
         body: SafeArea(
-          child: MainPage()
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+            child: MainPage(),
+          )
         )
       )
     );
